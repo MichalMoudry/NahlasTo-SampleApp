@@ -1,0 +1,185 @@
+﻿<Page
+    x:Class="NahlasTo.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="using:NahlasTo"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+    mc:Ignorable="d">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition />
+            <RowDefinition Height="auto" />
+        </Grid.RowDefinitions>
+
+        <!--  Header  -->
+        <Grid
+            Padding="15"
+            BorderBrush="Black"
+            BorderThickness="0,0,0,1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto" />
+                <ColumnDefinition />
+                <ColumnDefinition Width="auto" />
+                <ColumnDefinition Width="auto" />
+            </Grid.ColumnDefinitions>
+
+            <FontIcon
+                FontFamily="{StaticResource FluentUIGlyphs}"
+                FontSize="30"
+                Glyph="&#xE908;" />
+            <TextBlock
+                Grid.Column="1"
+                Margin="15,-2,0,0"
+                Style="{StaticResource TitleTextBlockStyle}"
+                Text="Nahlaš.to" />
+            <Button
+                x:Name="loginButton"
+                Grid.Column="2"
+                Margin="0,0,20,0"
+                Background="Transparent"
+                BorderThickness="0"
+                Click="loginButton_Click">
+                <Button.Content>
+                    <StackPanel Orientation="Horizontal">
+                        <FontIcon
+                            FontFamily="{StaticResource FluentUIGlyphs}"
+                            FontSize="25"
+                            Glyph="&#xEB00;" />
+                        <TextBlock
+                            Margin="10,0,0,0"
+                            VerticalAlignment="Center"
+                            FontSize="20"
+                            Text="Přihlásit se" />
+                    </StackPanel>
+                </Button.Content>
+            </Button>
+            <Button
+                x:Name="registerButton"
+                Grid.Column="3"
+                Background="Transparent"
+                BorderThickness="0"
+                Click="RegisterButton_Click">
+                <Button.Content>
+                    <StackPanel Orientation="Horizontal">
+                        <FontIcon
+                            FontFamily="{StaticResource FluentUIGlyphs}"
+                            FontSize="25"
+                            Glyph="&#xEAFF;" />
+                        <TextBlock
+                            Margin="10,0,0,0"
+                            VerticalAlignment="Center"
+                            FontSize="20"
+                            Text="Registrace" />
+                    </StackPanel>
+                </Button.Content>
+            </Button>
+        </Grid>
+
+        <StackPanel
+            Grid.Row="1"
+            MinWidth="500"
+            HorizontalAlignment="Center">
+            <TextBlock
+                Margin="0,20,0,0"
+                HorizontalAlignment="Center"
+                Style="{StaticResource SubheaderTextBlockStyle}"
+                Text="Úvodní text popisující aplikaci" />
+            <TextBox Margin="0,50,0,0" PlaceholderText="Zadejte váš dotaz..." />
+            <Button
+                x:Name="submitProblemButton"
+                Margin="0,50,0,0"
+                HorizontalAlignment="Center"
+                Click="SubmitProblemButton_Click"
+                Style="{StaticResource AccentButtonStyle}">
+                <Button.Content>
+                    <StackPanel Orientation="Horizontal">
+                        <FontIcon FontFamily="{StaticResource FluentUIGlyphs}" Glyph="&#xE903;" />
+                        <TextBlock Margin="5,0,0,0" Text="Nahlásit problém" />
+                    </StackPanel>
+                </Button.Content>
+            </Button>
+        </StackPanel>
+
+        <Grid
+            Grid.Row="2"
+            Margin="0,20,0,0"
+            Padding="25">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+
+            <StackPanel
+                Margin="0,0,20,0"
+                Padding="25,15,25,15"
+                BorderBrush="Black"
+                BorderThickness="1"
+                CornerRadius="5">
+                <TextBlock Style="{StaticResource SubtitleTextBlockStyle}" Text="Aktivita na příspěvcích" />
+            </StackPanel>
+
+            <StackPanel
+                Grid.Column="1"
+                Margin="0,0,20,0"
+                Padding="25,15,25,15"
+                BorderBrush="Black"
+                BorderThickness="1"
+                CornerRadius="5">
+                <TextBlock Style="{StaticResource SubtitleTextBlockStyle}" Text="Recommended sekce - komunity poblíž uživatele" />
+            </StackPanel>
+
+            <StackPanel
+                Grid.Column="2"
+                Padding="25,15,25,15"
+                BorderBrush="Black"
+                BorderThickness="1"
+                CornerRadius="5">
+                <TextBlock Style="{StaticResource SubtitleTextBlockStyle}" Text="Feedback sekce o aplikaci - např. tweety, ... (optional)" />
+            </StackPanel>
+        </Grid>
+
+        <!--  Footer  -->
+        <Grid
+            Grid.Row="3"
+            Padding="15"
+            BorderBrush="Black"
+            BorderThickness="0,1,0,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+
+            <HyperlinkButton HorizontalAlignment="Center" Content="Ochodní podmínky" />
+
+            <HyperlinkButton
+                Grid.Column="1"
+                HorizontalAlignment="Center"
+                Content="Ochrana osobních údajů" />
+
+            <FontIcon
+                Grid.Column="2"
+                FontFamily="{StaticResource FluentUIGlyphs}"
+                FontSize="25"
+                Glyph="&#xE908;" />
+
+            <HyperlinkButton
+                Grid.Column="3"
+                HorizontalAlignment="Center"
+                Content="Kontakt" />
+
+            <HyperlinkButton
+                Grid.Column="4"
+                HorizontalAlignment="Center"
+                Content="O nás" />
+        </Grid>
+    </Grid>
+</Page>

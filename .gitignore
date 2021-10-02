@@ -1,0 +1,7 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/NahlasTo/bin/x86/Debug
+/NahlasTo/.vs/NahlasTo/v16
+/NahlasTo/obj
